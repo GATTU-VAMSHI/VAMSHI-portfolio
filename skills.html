@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.bio.link/uploads/profile_pictures/2021-09-01/tE8wirBYKrXgipi0HP0GK69YD9TzfsDY.png" type="image/webp">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/uicons/2.0.8/css/uicons-regular-rounded.css" rel="stylesheet">
+  <title>Portfolio - Gattu Vamshi</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./assets/css/skills.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Vamshi</div>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./skills.html">Skills</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./qualification.html">Qualifications</a></li>
+        <li><a href="./contact.html">Contact Me</a></li>
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fa-regular fa-moon" id="theme-icon"></i>
+          </button>      
+    </ul>
+</nav>
+  </header>
+  <h1 class="heading">Skills</h1>
+  <main>
+    <section class="skills">
+        <div class="skill-section">
+          <div class="skill-header" onclick="toggleSection('languages-content', this)">
+            <h2>Languages<p>Languages that I have picked up over the years</p></h2>
+            <i class="fa-solid fa-angles-down expand"></i>
+          </div>
+          <div class="skill-content" id="languages-content">
+            <h4>Front-end</h4>
+            <p><i class="fa-brands fa-html5 icn"></i> HTML</p>
+            <p><i class="fa-brands fa-css3-alt icn"></i> CSS</p>
+            <p><i class="fa-brands fa-js icn"></i> JavaScript</p>
+            <h4>Back-end</h4>
+            <p><i class="fa-brands fa-python icn"></i> Pyhton</p>
+            <p><i class="fa-brands fa-node icn"></i> Node.js</p>
+        
+          </div>
+        </div>
+    
+        <div class="skill-section">
+          <div class="skill-header" onclick="toggleSection('frameworks-content', this)">
+            <h2><i class="uil uil-brackets-curly"></i>Libraries & Frameworks<p>Libraries and Frameworks that I prefer to work with</p></h2>
+            <i class="fa-solid fa-angles-down expand"></i>
+          </div>
+          <div class="skill-content" id="frameworks-content">
+            <p><i class="fa-brands fa-react icn"></i> React.js</p>
+            <p><i class="fa-solid fa-pepper-hot icn"></i> Flask </p>
+            <p><i class="fa-brands fa-python icn"></i> Django</p>
+            <p><i class="fa-brands fa-bootstrap icn"></i> Bootstrap</p>
+            <p><i class="fa-solid fa-leaf icn"></i> MongoDB</p>
+            <p><i class="fa-brands fa-node-js icn"></i> Express JS</p>
+          </div>
+        </div>
+        <div class="skill-section">
+          <div class="skill-header" onclick="toggleSection('tools-content', this)">
+            <h2>Tools<p>Tools that I know and use on a daily basis</p></h2>
+            <i class="fa-solid fa-angles-down expand"></i>
+          </div>
+          <div class="skill-content" id="tools-content">
+            <p><i class="fa-brands fa-git-alt icn"></i> Git</p>
+            <p><i class="fa-brands fa-github icn"></i> GitHub </p>
+            <p><i class="fa-brands fa-figma icn"></i> Figma</p>
+
+          </div>
+        </div>
+      </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow: hidden; /* Prevents scrollbar during transitions */
+}
+
+.heading {
+  padding-top: 3rem;
+  text-align: center;
+  color: #000000;
+  font-size: 1cm;
+}
+
+/* Carousel Container */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1500px; /* Enables 3D effect */
+  overflow: hidden;
+}
+
+/* Project */
+.project {
+  position: absolute;
+  width: 70%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  opacity: 0;
+  transform: rotateY(90deg) translate(-50%, -50%);
+  top: 35%; /* Centers vertically within the parent */
+  left: 50%; /* Centers horizontally within the parent */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Active Project */
+.project.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  z-index: 2;
+}
+
+/* Exit to Left */
+.project.exit-left {
+  transform: rotateY(90deg) translate(-150%, -50%);
+  opacity: 0;
+}
+
+/* Exit to Right */
+.project.exit-right {
+  transform: rotateY(-90deg) translate(50%, -50%);
+  opacity: 0;
+}
+
+/* Flex container for project image and details */
+.project-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Ensures the flex container takes full width */
+}
+
+/* Image Styling */
+.project-content img {
+  max-width: 35%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 6px 6px 10px #00ADB5;
+}
+
+/* Text Styling */
+.project-details {
+  max-width: 55%;
+  text-align: center; /* Ensures text looks centered */
+}
+
+.project-details h3 {
+  color:#000000;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color:#000000;
+  margin-bottom: 20px;
+}
+
+.project-details a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00ADB5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-details a:hover {
+  background-color: #02858c;
+}
+
+/* Arrow Navigation Buttons */
+.arrow {
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: #00ADB5;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.arrow:hover {
+  color: #02858c;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading{
+    padding-top: 1rem;
+  }
+  .project {
+    width: 90%;
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: flex-start; /* Ensures content aligns to the top */
+    padding: 90px; /* Optional: Adds padding inside the project container */
+  }
+
+  .project-content {
+    flex-direction: column; /* Ensures image and text stack properly */
+    display: flex; /* Makes sure flex properties apply */
+    align-items: center; /* Centers text and image horizontally */
+    padding-top: 1px;
+  }
+
+  .project-content img {
+    max-width: 50%; /* Scales image for smaller screens */
+    padding-top: 10px;
+    margin-bottom: 15px; /* Adds space below the image */
+    padding: 1px;
+    background-color: #02858c;
+  }
+
+
+  .project-details {
+    max-width: 100%;
+    text-align: center;
+    padding: 10px 0; /* Optional: Adds padding for spacing */
+  }
+
+  .project-details .description {
+    font-size: 1rem; /* Adjusts font size for smaller screens */
+    margin-bottom: 15px; /* Ensures spacing between description and button */
+  }
+
+  .project-details .btn {
+    width: 100%; /* Makes button take full width */
+    padding: 10px;
+    text-align: center; /* Ensures the button text is centered */
+    background-color: #00ADB5; /* Button color */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .project-details .btn:hover {
+    background-color: #02858c; /* Button hover effect */
+  }
+}
+
+@media (max-width: 500px) {
+  .heading{
+    font-size: 2rem;
+  }
+  .project-content {
+    flex-direction: column; 
+    display: flex; 
+    align-items: center; 
+  }
+  .project-content img {
+    align-content: center;
+    max-width: 50%; 
+    padding: 1px;
+    background-color: #02858c;
+  }
+  .project-content h3{
+    font-size: 1rem;
+  }
+  .project-details p{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .heading{
+    font-size: 1rem;
+  }
+  .project-details h3{
+    font-size: 0.8rem;
+  }
+  .project-details p{
+    font-size: 0.6rem;
+  }
+  .project-content img{
+    max-width: 40%;
+  }
+}
+
+.dark-mode .heading{
+  color:#fff;
+}
+
+.dark-mode .project{
+  color: #fff;
+  background-color: #222831;
+}
+.dark-mode .project-details h3,p{
+  color: #fff;
+}
+.dark-mode .project-details p{
+  color: #fff;
+}

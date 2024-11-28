@@ -1,0 +1,136 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+
+  .heading {
+    padding-top: 3rem;
+    text-align: center;
+    color: #000000;
+    font-size: 1cm;
+  }
+  .qualifications {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Tabs Styling */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .tab {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: #00ADB5;
+    color: #ffffff;
+  }
+
+  /* Timeline Styling */
+  .timeline {
+    position: relative;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: #00ADB5;
+    left: 22px;
+    top: 0;
+  }
+  
+  /* .timeline-item:last-child .timeline-line {
+    height: 100%;
+  } */
+  
+  .timeline-content {
+    text-align: left;
+    padding: 20px 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px);
+    margin-left: 40px; /* Remove dot alignment */
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+  
+  .timeline-content p {
+    font-size: 1rem;
+    color: #666666;
+    margin: 0;
+  }
+  
+  .timeline-content .date {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #999999;
+    margin-top: 10px;
+  }
+  
+@media (max-width: 365px){
+    .heading{
+        font-size: 0.7cm;
+    }
+
+    .timeline-content h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+      .timeline-content p {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+      }
+      .timeline-content .date {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+      }
+}
+
+
+.dark-mode .heading{
+    color:#EEEEEE;
+  }
+.dark-mode .qualifications{
+    background-color: #222831;
+}
+
+.dark-mode .qualifications .timeline-content{
+    background-color: #222831;
+}
+
+.dark-mode .qualifications .timeline-content h3{
+    color: #EEEEEE;
+}
+.dark-mode .qualifications .timeline-content P{
+    color: #EEEEEE;
+}
+
